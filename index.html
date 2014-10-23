@@ -16,6 +16,27 @@
     <div class="main">
         <ul class="cbp_tmtimeline">
             <li>
+                <time class="cbp_tmtime" datetime="2014-10-23 22:42"><span>10/23/14</span><span>22:42</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel">
+                    <h2>iOS开发之回调delegate的方法时判断delegate是否已经被释放</h2>
+                    <p>
+                        类名如下：
+                        <br>//Returns the class name of a given object.
+                        <br>const char *object_getClassName(id obj);
+                        <br>
+                        <br>//Returns the class of an object.
+                        <br>Class object_getClass(id object);
+                        <br><br>第一个函数可以返回任意一个id的类名，第二个函数可以返回任意一个id的Class。这两个函数各有优劣。使用第一个函数判断类型是否改变的优点是在 iphone开发环境下默认公开，
+                        可以随便调用，缺点是要使用几字节的内存空间用于存放字符串，而且做字符串比较要稍微多花费一些CPU时间。第二个函数 优点是可以将获取的Class指针做为int型保存起来，
+                        只需要4字节，且比较起来节约CPU时间，坏处是我们要手动声明一下此函数才可以在自己的代码里 使用，
+                        否则会出现一个warning，提示“Implicit declaration of function ‘object_getClass’ is invalid in C99”，不过手动声明一下只要加一行代码就可以，也不麻烦。
+
+                        <br><br>具体出处链接：<a href="http://blog.csdn.net/ch_soft/article/details/7712655">iOS开发之回调delegate的方法时判断delegate是否已经被释放</a>
+                    </p>
+                </div>
+            </li>
+            <li>
                 <time class="cbp_tmtime" datetime="2014-10-15 09:55"><span>10/15/14</span><span>09:55</span></time>
                 <div class="cbp_tmicon cbp_tmicon-pacman"></div>
                 <div class="cbp_tmlabel">
