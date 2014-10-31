@@ -35,6 +35,6 @@ a:hover {
 .main{
 	width: 90%;
 	max-width: 69em;
-	margin: 0 auto;
+    margin: 0 auto;
 	padding: 0 1.875em 3.125em 1.875em;
 }

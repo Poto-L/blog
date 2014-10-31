@@ -3,7 +3,7 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title>奔跑的土豆</title>
-    <script src="js_source/modernizr.js"></script>
+    <!--<script src="js_source/modernizr.js"></script>-->
 </head>
 <body>
 
@@ -15,6 +15,66 @@
 <div class="container">
     <div class="main">
         <ul class="cbp_tmtimeline">
+            <li>
+                <time class="cbp_tmtime" datetime="2014-10-31 10:09"><span>10/31/14</span><span>10:09</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel" id = "div_hidden_opaque_aplha">
+                    <h2>iOS开发中，hidden、opaque、aplha区别</h2>
+                    <p>
+                        <br>1. @property(nonatomic) CGFloat alpha;
+                        <br>This value affects only the current view and does not affect any of its embedded subviews.
+                        Changes to this property can be animated.
+                        <br>
+                        <br>2. @property(nonatomic, getter=isHidden) BOOL hidden;
+                        <br>The default value is NO.
+                        <br>A hidden view disappears from its window and does not receive input events. Itremains in its superview’s
+                        list of subviews, however, and participates in autoresizing as usual.Hiding a view with subviews has the
+                        effect of hiding those subviews and any view descendants they might have. This effect is implicit anddoes
+                        not alter the hidden state of the receiver’s descendants.
+                        <br>
+                        <br>3. @property(nonatomic, getter=isOpaque) BOOL opaque;
+                        <br>This property provides a hint to the drawing system as to how it should treat the view.If set to YES,
+                        the drawing system treats the view as fully opaque, which allows the drawing system to optimize some drawing
+                        operations and improve performance. If set to NO, the drawing system composites the view normally with other
+                        content. The default value of this property is YES.
+                        <br><span style="color: blue">You should always set the value of this property to NO if the view is fully or partially transparent.</span>
+                        <br>
+                        <br>
+                        <br>alpha支持animation, hidden和opaque不支持
+                        <br>hidden开销小,alpha=0透明开销大,如果效果一样,用hidden好一点.
+                        <br>hideen的时候view是不接收事件的,但alpha为0接收
+                        <br>上面的英文文档有一点挺重要的,当把View设置为透明的背景时,一般把opaque设置为NO,可以减少开销,对内存也好.
+                    </p>
+                </div>
+            </li>
+            <li>
+                <time class="cbp_tmtime" datetime="2014-10-31 09:43"><span>10/31/14</span><span>09:43</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel">
+                    <h2>UIWebView 背景颜色改变</h2>
+                    <p>
+                        <br>UIWebView * web = [[UIWebView alloc] initWithFrame:CGRectZero];
+                        <br>web.background = [UIColor clearColor];
+                        <br><span style="color: red">web.opaque = NO;</span>
+                        <br>
+                        <br>opaque 属性为关键字段，具体用处在这：<a href="#div_hidden_opaque_aplha" style="text-decoration: red">iOS开发中，hidden、opaque、aplha区别</a>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <time class="cbp_tmtime" datetime="2014-10-25 10:18"><span>10/25/14</span><span>10:18</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel">
+                    <h2>Mac显示/隐藏文件的终端命令</h2>
+                    <p>
+                        显示 Mac 隐藏文件的命令：
+                        <br><span style="color: red;">defaults write com.apple.finder AppleShowAllFiles -bool true</span>
+                        <br>
+                        隐藏 Mac 隐藏文件的命令：
+                        <br><span style="color: red">defaults write com.apple.finder AppleShowAllFiles -bool false</span>
+                    </p>
+                </div>
+            </li>
             <li>
                 <time class="cbp_tmtime" datetime="2014-10-23 22:42"><span>10/23/14</span><span>22:42</span></time>
                 <div class="cbp_tmicon cbp_tmicon-apple"></div>
