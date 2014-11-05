@@ -16,6 +16,31 @@
     <div class="main">
         <ul class="cbp_tmtimeline">
             <li>
+                <time class="cbp_tmtime" datetime="2014-11-5 17:42"><span>11/5/14</span><span>17:42</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel">
+                    <h2><span style="color: cornflowerblue">UIImageView 放大图片失真问题</span></h2>
+                    <p>
+                        方法：
+                        <br>UIImage * image = nil;
+                        <br>[image <span style="color: red">resizableImageWithCapInsets</span>:UIEdgeInsetsMake(1, 1, 1, 1)];
+                    </p>
+                </div>
+            </li>
+            <li>
+                <time class="cbp_tmtime" datetime="2014-11-3 12:10"><span>11/3/14</span><span>12:10</span></time>
+                <div class="cbp_tmicon cbp_tmicon-apple"></div>
+                <div class="cbp_tmlabel">
+                    <h2><span style="color: red">记录有关iOS开发中需要注意的一些事项 </span></h2>
+                    <p>
+                        <br>1.通过接口得到的结果需要进行格式验证，以防止崩溃。
+                        <br>2.有些情况下（如：网络数据与本地数据的切换），需要对按钮的点击作限制，如点击之后，需要静止再次点击
+                        <br>待到接口请求完成之后，或者接口报错之后，才响应按钮的点击事件。否则，会出现请求的数据不对，造成程序
+                        <br>崩溃。
+                    </p>
+                </div>
+            </li>
+            <li>
                 <time class="cbp_tmtime" datetime="2014-10-31 10:09"><span>10/31/14</span><span>10:09</span></time>
                 <div class="cbp_tmicon cbp_tmicon-apple"></div>
                 <div class="cbp_tmlabel" id = "div_hidden_opaque_aplha">
